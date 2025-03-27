@@ -1,0 +1,661 @@
+/* &* gloable style */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 30px;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+::-webkit-scrollbar {
+    width: 15px;
+}
+::-webkit-scrollbar-track {
+    background-color: #eee;
+}
+::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.584) , rgba(128, 128, 128, 0.648));
+}
+.title {
+    text-align: center;
+}
+.title h2 {
+    font-size: 48px;
+    color: #1e1e1e;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.title p {
+    color: #4e4e4e;
+    font-size: 16px;
+    position: relative;
+}
+.title p::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 5px;
+    background-color: #0078FF;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+body:has(#home:target) .navbar a[href="#home"]::before,    
+body:has(#about:target) .navbar a[href="#about"]::before,   
+body:has(#services:target) .navbar a[href="#services"]::before,    
+body:has(#portfolio:target) .navbar a[href="#portfolio"]::before,    
+body:has(#blog:target) .navbar a[href="#blog"]::before,    
+body:has(#contact:target) .navbar a[href="#contact"]::before { 
+    width: 65%;
+}
+
+
+/* &* gloable style */
+
+/* & start navbar style  */
+.myNav {
+    background-color: rgba(0, 0, 0, 0.845) !important;
+}
+.myNav .nav-icon i {
+    font-size: 30px;
+}
+.myNav .links > ul > li > a{
+    color: #FFF !important;
+    font-size: 16px;
+}
+.myNav .logo {
+    color: #fff !important ;
+    font-size: 28px;
+}
+.myNav .nav-link {
+    position: relative;
+    width: fit-content;
+}
+.nav-item a::before{
+    content: "";
+    width: 0%;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0px;
+    left: 5px;
+    transition: all 500ms;
+}
+.myNav .active {
+    position: relative;
+}
+.myNav .active::before {
+    content: "";
+    width: 70%;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0px;
+    left: 5px;
+}
+
+.nav-item a:hover::before {
+    width: 65%;
+}
+.drop-item a {
+    color: black !important;
+}
+.dropdown:hover > .dropdown-menu {
+    display: block;
+    margin-top: 0.125rem;
+}
+/* & end navbar style  */
+
+
+
+/* &* start home section style */
+
+.home {
+    background-image: linear-gradient(rgba(0,0,0, 0.5) ,rgba(0,0,0, 0.5)) , url(../Images/hero-bg.jpg) ;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.main-heading {
+    font-size: 72px;
+}
+.typing {
+    font-size: 45px;
+    width: fit-content;
+    margin: 0px auto;
+}
+.typing::before {
+    content: "";
+    animation-name: typing;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.home .up {
+    bottom: 20px;
+    right: 5%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.home .up  i {
+    font-size: 20px;
+    color: #fff;
+}
+
+/* &* end home section style */
+
+
+/* & Start About Section  */
+
+.about .about-content {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.244);
+}
+.about .about-me h2 {
+    width: fit-content !important ;
+}
+.heading::before{
+    content: "";
+    position: absolute;
+    width: 60%; 
+    height: 4px;
+    background-color: #0078FF;
+    bottom: -10px;
+}
+.about .about-me p {
+    font-size: 16px;
+    line-height: 1.7;
+}
+/* & End About Section  */
+
+
+/*^ Start Services Section  */
+
+.services .card {
+    border: none;
+}
+.services .inner {
+    box-shadow: 0px 0px 10px #00000041 ;
+}
+.services .inner:hover  .services-icon {
+    background-color: #0078FF;
+    border-color: #FFF !important;
+    box-shadow: 0px 0px 0px 10px #0077ff29 !important;
+    color: #fff;
+}
+.services .card .inner .services-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 0px 10px #0078FF;
+    transition: all 500ms;
+}
+.services .card .inner .services-icon i {
+    font-size: 40px;
+}
+.services .card .inner .card-body .card-title {
+    font-size: 22px;
+    color: #1e1e1e;
+}
+.services .card .inner .card-body .card-text {
+    color: #4e4e4e;
+}
+/*^ End Services Section  */
+
+
+/*& start count-board section  */
+
+.count-board {
+    background-image: linear-gradient(#0077ffaf , #0077ffaf ) , url(../Images/counters-bg.jpg);
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.inner .icon {
+    box-shadow: 0 0 0 10px #cde1f8;    
+    width: 60px;
+    height: 60px;
+}
+/*& end count-board section  */
+
+/** Start portfolio section  */
+
+.portfolio .inner {
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.247);
+}
+.portfolio .inner .card .img img {
+    transition: all 800ms;
+}
+.portfolio .inner:hover .card .img img {
+    transform: scale(1.25,1.25);
+
+}
+.portfolio .port-icon {
+    width: 40px;
+    height: 40px;
+}
+
+/** End portfolio section  */
+
+/* ^ Start Testimonals Section  */
+
+.testimonials {
+    background-image: linear-gradient(#0077ffaf , #0077ffaf ), url(../Images/overlay-bg.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.testimonials .myImg {
+    width: 120px;
+}
+.testimonials .myImg1 {
+    width: 98px;
+}
+
+.testimonials .indicator{
+    width: 13px;
+    height: 13px;
+} 
+
+@media screen and (max-width:640px) {
+    .testimonials .testy {
+        width: 100% !important;
+        margin: 0px auto;
+    }
+    .nav-item a:hover::before {
+        width: 100%;
+    }
+} 
+/* ^ End Testimonals Section  */
+
+/*! Start Blog Section  */
+
+.blog .btn {
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.blog  .logo {
+    width: 30px;
+    height: 30px;
+} 
+.blog .card-title {
+    transition: all 500ms;
+    cursor: pointer;
+}
+.blog .card-title:hover {
+    color: #0078FF;
+}
+.blog .footer-title {
+    transition: all 500ms;
+    cursor: pointer;
+}
+.blog .footer-title:hover {
+    color: #0078FF;
+}
+
+/*! End Blog Section  */
+
+/** Start Contact Section  */
+.contact {
+    background-image: linear-gradient(#0077ffaf , #0077ffaf ) , url(../Images/overlay-bg.jpg);
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.contact h2 {
+    width: fit-content !important ;
+}
+
+textarea {
+    resize: none;
+    height: 150px;
+}
+
+.form-btn {
+    font-size: 20px;
+}
+.data-info {
+    line-height: 1.6;
+    font-size: 20px;
+    font-weight: 300;
+}
+.contact-icons .icon {
+    width: 40px;
+    height: 40px;   
+    box-shadow: 0px 0px 0px 4px #0078FF;
+    transition: all 500ms ;
+}
+.contact-icons .icon:hover {
+    background-color: #0078FF;
+    box-shadow: 0px 0px 0px 4px #0077ff50;
+
+    color: #fff;
+}
+.contact-icons .icon i {
+    font-size: 18px ;
+}  
+
+/** End Contact Section  */
+
+
+footer {
+    background-color: #0062D3;
+}
+/* !amimation */
+
+
+@keyframes typing {
+    0%{
+        content: "|";
+    }
+    1%{
+        content: "D |";
+    }
+    2%{
+        content: "De |";
+    }
+    3%{
+        content: "Des |";
+    }
+    4%{
+        content: "Desi |";
+    }
+    5%{
+        content: "Desig |";
+    }
+    6%{
+        content: "Design |";
+    }
+    7%{
+        content: "Designe |";
+    }
+    8%{
+        content: "Designer |";
+    }
+    9%{
+        content: "Designer |";
+    }
+    10%{
+        content: "Designer |";
+    }
+    11%{
+        content: "Designer |";
+    }
+    12%{
+        content: "Designer |";
+    }
+    13%{
+        content: "Designer|";
+    }
+    14%{
+        content: "Design|";
+    }
+    15%{
+        content: "Desig|";
+    }
+    16%{
+        content: "Desi|";
+    }
+    17%{
+        content: "Des|";
+    }
+    18%{
+        content: "De|";
+    }
+    19%{
+        content: "Dev|";
+    }
+    20%{
+        content: "Deve|";
+    }
+    21%{
+        content: "Devel|";
+    }
+    22%{
+        content: "Develo|";
+    }
+    23%{
+        content: "Develop|";
+    }
+    24%{
+        content: "Develope|";
+    }
+    25%{
+        content: "Developer|";
+    }
+    26%{
+        content: "Developer |";
+    }
+    27%{
+        content: "Developer |";
+    }
+    28%{
+        content: "Developer |";
+    }
+    29%{
+        content: "Developer |";
+    }
+    30%{
+        content: "Developer|";
+    }
+    31%{
+        content: "Develope|";
+    }
+    32%{
+        content: "Develop|";
+    }
+    33%{
+        content: "Develo|";
+    }
+    34%{
+        content: "Devel|";
+    }
+    35%{
+        content: "Deve|";
+    }
+    36%{
+        content: "Dev|";
+    }
+    36%{
+        content: "De|";
+    }
+    37%{
+        content: "D|";
+    }
+    38%{
+        content: "|";
+    }
+    39%{
+        content: "|";
+    }
+    40%{
+        content: "|";
+    }
+    41%{
+        content: " |";
+    }
+    42%{
+        content: "F |";
+    }
+    43%{
+        content: "Fr |";
+    }
+    44%{
+        content: "Fre |";
+    }
+    45%{
+        content: "Free |";
+    }
+    46%{
+        content: "Freel |";
+    }
+    47%{
+        content: "Freela |";
+    }
+    48%{
+        content: "Freelan |";
+    }
+    49%{
+        content: "Freelans |";
+    }
+    50%{
+        content: "Freelanse |";
+    }
+    51%{
+        content: "Freelanser |";
+    }
+    52%{
+        content: "Freelanser |";
+    }
+    53%{
+        content: "Freelanser |";
+    }
+    55%{
+        content: "Freelanser |";
+    }
+    55%{
+        content: "Freelanser |";
+    }
+    56%{
+        content: "Freelanser|";
+    }
+    57%{
+        content: "Freelanse|";
+    }
+    58%{
+        content: "Freelans|";
+    }
+    59%{
+        content: "Freelan|";
+    }
+    60%{
+        content: "Freela|";
+    }
+    61%{
+        content: "Freel|";
+    }
+    62%{
+        content: "Free|";
+    }
+    63%{
+        content: "Fre|";
+    }
+    64%{
+        content: "Fr|";
+    }
+    65%{
+        content: "F|";
+    }
+    66%{
+        content: "|";
+    }
+    67%{
+        content: "|";
+    }
+    68%{
+        content: "|";
+    }
+    69%{
+        content: " |";
+    }
+    70%{
+        content: "P |";
+    }
+    71%{
+        content: "Ph |";
+    }
+    72%{
+        content: "Pho |";
+    }
+    73%{
+        content: "Phot |";
+    }
+    74%{
+        content: "Photo |";
+    }
+    75%{
+        content: "Photog |";
+    }
+    76%{
+        content: "Photogr |";
+    }
+    77%{
+        content: "Photogra |";
+    }
+    78%{
+        content: "Photograp |";
+    }
+    79%{
+        content: "Photograph |";
+    }
+    80%{
+        content: "Photographe |";
+    }
+    81%{
+        content: "Photographer |";
+    }
+    82%{
+        content: "Photographer |";
+    }
+    83%{
+        content: "Photographer |";
+    }
+    84%{
+        content: "Photographer |";
+    }
+    85%{
+        content: "Photographer |";
+    }
+    86%{
+        content: "Photographer |";
+    }
+    87%{
+        content: "Photographe |";
+    }
+    88%{
+        content: "Photograph |";
+    }
+    89%{
+        content: "Photograp |";
+    }
+    90%{
+        content: "Photogra |";
+    }
+    91%{
+        content: "Photogr |";
+    }
+    92%{
+        content: "Photog |";
+    }
+    93%{
+        content: "Photo |";
+    }
+    94%{
+        content: "Phot |";
+    }
+    95%{
+        content: "Pho |";
+    }
+    96%{
+        content: "Ph |";
+    }
+    97%{
+        content: "P |";
+    }
+    98%{
+        content: " |";
+    }
+    99%{
+        content: "|";
+    }
+    100%{
+        content: "|";
+    }
+}

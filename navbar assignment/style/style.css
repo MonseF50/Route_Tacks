@@ -1,0 +1,89 @@
+/* start global style  */
+body{
+    margin: 0;
+    padding: 0;
+    height: 3000px;
+}
+.clr{
+    clear: both;
+}
+.container {
+    width: 80%;
+    margin: auto;
+}
+/* end global style  */
+
+/* start navbar section  */
+
+.navbar{
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    background-color: rgb(0, 0, 0, 0.5);
+
+}
+.navbar .logo {
+    width: 60px;
+    float: left;
+}
+.navbar img {
+    width: 100%;
+    border-radius: 50%;
+}
+.navbar .links {
+    float: right;
+}
+.navbar .links ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.navbar .links ul li {
+    float: left;
+    padding: 15px 25px ;
+
+}
+.navbar .links ul li a {
+    text-decoration: none; 
+    color: white;
+}
+/* end navbar section  */
+
+/* start header section  */
+
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../imgas/background.jpg);
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+.header img {
+    width: 200px;
+    margin-top: 200px;
+    border-radius:50% ;
+}
+.header h3{
+    font-size: 30px;
+}
+.header p {
+    font-size: 20px;
+}
+.header .header-btn{
+    margin-top: 40px;
+}
+.header .header-btn button {
+    padding: 10px 25px ;
+    background-color: #eee;
+}
+
+/* end header section  */
+

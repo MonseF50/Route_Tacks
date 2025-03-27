@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookMark</title>
+    <link rel="icon" href="./imgs/bookmark.png">
+    <!--! google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <!--! fontawesome stylesheet -->
+    <link rel="stylesheet" href="./style/all.min.css">
+    <!--! bootstrap stylesheet -->
+    <link rel="stylesheet" href="./style/bootstrap.min.css">
+    <!--! main style stylesheet -->
+    <link rel="stylesheet" href="./style/main.css">
+</head>
+<body>
+    <div class="bookMark py-5">
+        <div class="container ">
+            <div class="heading py-3 mb-4">
+                <h1 class="poco-font">bookmarker</h1>
+            </div>
+            <div class="input-groupp p-4">
+            <div class="group-title">
+                <h2>
+                    <i class="fa-solid fa-bookmark"></i>
+                    Bookmark your favorite sites
+                    <i class="fa-solid fa-bookmark"></i>
+                </h2>
+            </div>
+            <div class="input-data mb-4">
+                <div class="input-title">
+                    <i class="fa-solid fa-bold fa-book"></i>
+                    <span class="fw-bold ms-2">Set Name</span>
+                </div>
+                <div class="input mt-2">
+                    <input oninput="valdiationInput(this, 'nameMasg')" class="form-control" id="inputName"  type="text" placeholder="BookMark Name" aria-label="default input example">
+                </div>
+                <p id="nameMasg" class="text-danger d-none">You Must Etner Char Btween A-Z , a-z , 0-9 And Min Chars :3 , Max Chars :15</p>
+            </div>
+            <div class="input-data mb-3">
+                <div class="input-title">
+                    <i class="fa-solid fa-link"></i>       
+                    <span class="fw-bold ms-2">Set URL</span>
+                </div>
+                <div class="input mt-2">
+                    <input oninput="valdiationInput(this, 'urlMasg')"  class="form-control" id="inputUrl" type="text" placeholder="Website URL" aria-label="default input example">
+                </div>
+                <p id="urlMasg" class="text-danger d-none">You Must Etner Correct Url Like :email.com</p>
+            </div>
+            <button onclick="createBookMark()" class="btn btn-danger bg-opacity-50 px-5 py-2 fs-5 m-auto d-block">submit</button>
+            </div>
+            <div class="bookMark-box mt-4">
+                <table class="table text-center">
+                    <thead>
+                        <tr>
+                            <th class="text-capitalize">index</th>
+                            <th class="text-capitalize">website name</th>
+                            <th class="text-capitalize">visit</th>
+                            <th class="text-capitalize">delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBodyData">
+                    </tbody>
+                </table>
+            </div>
+            <div id="rules" class="alert rules p-4 d-none">
+                <div class="rules-head d-flex justify-content-between">
+                    <div class="circles d-flex gap-2">
+                        <div class="elp bg-danger"></div>
+                        <div class="elp bg-warning"></div>
+                        <div class="elp bg-success"></div>
+                    </div>
+                    <div class="icon fs-4">
+                        <i onclick="dNone()" class="fa-solid fa-xmark"></i>
+                    </div>
+                </div>
+                <div class="rules-body mt-4">
+                    <h5 class="fw-bold breee mb-3">Site Name or Url is not valid, Please follow the rules below :</h5>
+                    <p><span> <i class="fa-solid fa-arrow-right"></i> </span> Site name must contain at least 3 characters</p>
+                    <p><span> <i class="fa-solid fa-arrow-right"></i> </span> Site URL must be a valid one like :email.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--! main java script  -->
+    <script src="./js/main.js"></script>
+</body>
+</html>
