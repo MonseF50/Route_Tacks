@@ -1,0 +1,19 @@
+.caption {
+    bottom:10px;
+    width: 80%;
+    left: 10%;
+}
+.lightBoxContainer{
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.ligthBoxConent {
+    background-image: url(../images/a.jpeg);
+    background-size: cover;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+i {
+    cursor: pointer;
+    border-radius: 50%;
+}
